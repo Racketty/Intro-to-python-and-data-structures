@@ -1,0 +1,10 @@
+#Write a program that prompts the user to enter the side of a hexagon and displays its area. 
+#The formula for computing the area of a hexagon is
+#area = (3 * sqrt(3) / 2) * s^2
+#where s is the length of a side
+
+s = float(input("Enter the side: "))
+
+area = (3 * (3 ** 0.5) / 2) * (s ** 2)
+
+print("The area of the hexagon is", area)
