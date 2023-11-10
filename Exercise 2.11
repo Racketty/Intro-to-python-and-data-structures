@@ -1,0 +1,15 @@
+#Suppose you want to deposit a certain amount of money into a savings account with a fixed annual interest rate. 
+#Write a program that prompts the user to enter the final account value, the annual interest rate in percent, and the number of years, and then displays the initial deposit amount. 
+#The initial deposit amount can be obtained using the following formula:
+#initialDepositAmount = finalAccountValue / (1 + monthlyInterestRate)^numberOfMonths
+
+finalAccountValue = float(input("Enter final account value: "))
+annualInterestRate = float(input("Enter annual interest rate in percent, for example 8.25: "))
+numberOfYears = int(input("Enter number of years as an integer, for example 5: "))
+
+numberOfMonths = numberOfYears * 12
+monthlyInterestRate = (annualInterestRate / 100) / 12
+
+initialDepositAmount = finalAccountValue / ((1 + monthlyInterestRate) ** numberOfMonths)
+
+print("Initial deposit value is", initialDepositAmount)
