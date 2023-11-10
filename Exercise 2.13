@@ -1,0 +1,13 @@
+#Write a program that prompts the user to enter a four-digit integer and displays the number in reverse order.
+
+number = int(input("Enter an integer: "))
+
+lastNum = number % 10
+secondLast = (number // 10) % 10
+thirdLast = (number // 100) % 10
+firstNum = number // 1000
+
+print(lastNum)
+print(secondLast)
+print(thirdLast)
+print(firstNum)
