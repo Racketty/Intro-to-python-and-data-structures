@@ -1,0 +1,11 @@
+#The formula is give as follows: twc = 35.74 + 0.6215ta - 35.75v^0.16 + 0.4275ta v^0.16
+#where ta is the outside temperature measured in degrees Fahrenheit and v is the speed measured in miles per hour. twc is the wind-chill temperature.
+#The formula cannot be used for wind speeds below 2 mph or for temperatures below -58F or above 41F.
+#Write a program that prompts the user to enter a temperature between -58F and 41F, a wind speed greater than or equal to 2, and then displays the wind-chill temperature.
+
+ta = float(input("Enter the temperature in Fahrenheit between -58 and 41: "))
+v = float(input("Enter the wind speed in miles per hour (must be greater than or equal to 2): "))
+
+twc = 35.74 + 0.6215 * ta - 35.75 * (v ** 0.16) + 0.4275 * ta * (v ** 0.16)
+
+print(twc)
