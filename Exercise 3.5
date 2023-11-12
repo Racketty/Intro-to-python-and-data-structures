@@ -1,0 +1,26 @@
+#Write a program that prompts the user to enter an integer for today’s day of the week. 
+#(Sunday is 0, Monday is 1, …, and Saturday is 6). Also prompt the user to enter the number of days after today for a future day and display the future day of the week.
+#ONLY WORKS FOR PYTHON 3.10 AND ABOVE. Website checker only has python 3.6 to 3.9
+day = int(input("Enter today's day of week (0 to 6): "))
+dayElapsed = int(input("Enter the number of days elapsed since today: "))
+
+futureDay = (day + dayElapsed) % 7
+
+match day:
+    case 0: today = "Sunday"
+    case 1: today = "Monday"
+    case 2: today = "Tuesday"
+    case 3: today = "Wednesday"
+    case 4: today = "Thursday"
+    case 5: today = "Friday"
+    case 6: today = "Saturday"
+
+match futureDay:
+    case 0: print("Today is", today, "and the future day is Sunday")
+    case 1: print("Today is", today, "and the future day is Monday")
+    case 2: print("Today is", today, "and the future day is Tuesday")
+    case 3: print("Today is", today, "and the future day is Wednesday")
+    case 4: print("Today is", today, "and the future day is Thursday")
+    case 5: print("Today is", today, "and the future day is Friday")
+    case 6: print("Today is", today, "and the future day is Saturday")
+
