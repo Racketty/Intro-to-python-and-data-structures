@@ -1,0 +1,15 @@
+#Suppose you shop for rice and find it in two different-sized packages. You would like to write a program to compare the cost of the packages. 
+#The program prompts the user to enter the weight and price of each package and then displays the one with the better price.
+
+weight1 = float(input("Enter weight for package 1: "))
+price1 = float(input("Enter price for package 1: "))
+weight2 = float(input("Enter weight for package 2: "))
+price2 = float(input("Enter price for package 2: "))
+
+average1 = price1 / weight1
+average2 = price2 / weight2
+
+if average1 > average2:
+    print("Package 2 has the best price.")
+else:
+    print("Package 1 has the best price.")
