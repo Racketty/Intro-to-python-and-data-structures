@@ -1,0 +1,48 @@
+#Write a program that prompts the user to enter the month and year and displays the number of days in the month. 
+# For example, if the user entered month 2 and year 2000, the program should display that February 2000 has 29 days. 
+#If the user entered month 3 and year 2005, the program should display that March 2005 has 31 days.
+
+monthNum = int(input("Enter a month in the year (e.g., 1 for Jan): "))
+year = int(input("Enter a year: "))
+
+if monthNum == 1:
+    month = "January"
+    days = 31
+elif monthNum == 2:
+    month = "February"
+    if year % 4 == 0:
+        days = 29
+    else:
+        days = 28
+elif monthNum == 3:
+    month = "March"
+    days = 31
+elif monthNum == 4:
+    month = "April"
+    days = 30
+elif monthNum == 5:
+    month = "May"
+    days = 31
+elif monthNum == 6:
+    month = "June"
+    days = 30
+elif monthNum == 7:
+    month = "July"
+    days = 31
+elif monthNum == 8:
+    month = "August"
+    days = 31
+elif monthNum == 9:
+    month = "September"
+    days = 30
+elif monthNum == 10:
+    month = "October"
+    days = 31
+elif monthNum == 11:
+    month = "November"
+    days = 30
+else:
+    month = "December"
+    days = 31
+
+print(month, year, "has", days, "days")
