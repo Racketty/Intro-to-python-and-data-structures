@@ -1,0 +1,28 @@
+#Write a program that prompts the user to enter three numbers and displays them in increasing order.
+
+number1 = float(input("Enter number1: "))
+number2 = float(input("Enter number2: "))
+number3 = float(input("Enter number3: "))
+
+if number1 < number2 and number1 < number3:
+    one = number1
+elif number2 < number1 and number2 < number3:
+    one = number2
+else:
+    one = number3
+
+if number1 < number2 and number1 > number3 or number1 < number3 and number1 > number2:
+    two = number1
+elif number2 < number3 and number2 > number1 or number2 < number1 and number2 > number3:
+    two = number2
+else:
+    two = number3
+
+if number1 > number2 and number1 > number3:
+    three = number1
+elif number2 > number1 and number2 > number3:
+    three = number2
+else:
+    three = number3
+
+print("The sorted numbers are", one, two, three)
