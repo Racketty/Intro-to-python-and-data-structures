@@ -1,0 +1,36 @@
+#Write a program that simulates picking a card from a deck of 52 cards. 
+#Your program should display the rank (Ace, 2, 3, 4, 5, 6, 7, 8, 9, 10, Jack, Queen, King) and suit (Clubs, Diamonds, Hearts, Spades) of the card. 
+
+import random
+
+rank = random.randint(1, 13)
+suit = random.randint(0, 3)
+
+valid = True
+
+if rank == 1:
+    rankIs = ("Ace")
+    valid = False
+elif rank == 11:
+    rankIs = ("Jack")
+    valid = False
+elif rank == 12:
+    rankIs = ("Queen")
+    valid = False
+elif rank == 13:
+    rankIs = ("King")
+    valid = False
+
+if suit == 0:
+    suitIs = ("Clubs")
+elif suit == 1:
+    suitIs = ("Diamonds")
+elif suit == 2:
+    suitIs = ("Hearts")
+else:
+    suitIs = ("Spades")
+
+if valid == True:
+    print("The card you picked is", rank, "of", suitIs)
+else:
+    print("The card you picked is", rankIs, "of", suitIs)
