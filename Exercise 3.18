@@ -1,0 +1,16 @@
+#Write a program that prompts the user to enter the currency exchange rate between U.S. dollars and Chinese Renminbi (RMB). 
+#Prompt the user to enter 0 to convert from U.S. dollars to Chinese RMB and 1 for vice versa. 
+#Prompt the user to enter the amount in U.S. dollars or Chinese RMB to convert it to Chinese RMB or U.S. dollars, respectively.
+
+exchangeRate = float(input("Enter the exchange rate from dollars to RMB: "))
+convert = int(input("Enter 0 to convert dollars to RMB and 1 vice versa: "))
+
+if convert == 0:
+    amount = float(input("Enter the dollar amount: "))
+    num = amount * exchangeRate
+    print(f"{float(amount):.2f}", "dollars is", round(num, ndigits=2), "Yuan")
+elif convert == 1:
+    amount = float(input("Enter the RMB amount: "))
+    print(f"{float(amount):.2f}", "Yuan is", round(amount / exchangeRate, ndigits=2), "dollars")
+else:
+    print("Incorrect input")
