@@ -1,0 +1,20 @@
+#Write a program that prompts the user to enter the center coordinates and radii of two circles and determines whether the second circle is inside the first or overlaps with the first, as shown in Figure 3.11. 
+#(Hint: circle2 is inside circle1 if the distance between the two centers <= |r1 - r2| and circle2 overlaps circle1 if the distance between the two centers <= r1 + r2.  
+#Test your program to cover all cases.)
+
+x1 = float(input("Enter circle1's center x-coordinate: "))
+y1 = float(input("Enter circle1's center y-coordinate: "))
+r1 = float(input("Enter circle1's radius: "))
+x2 = float(input("Enter circle2's center x-coordinate: "))
+y2 = float(input("Enter circle2's center y-coordinate: "))
+r2 = float(input("Enter circle2's radius: "))
+
+
+distance = ((((x2 - x1) ** 2) + ((y2 - y1) ** 2)) ** 0.5)
+
+if (distance ** 2) <= ((r1 - r2) ** 2):
+    print("Circle2 is inside circle1")
+elif distance <= r1 + r2:
+    print("Circle2 overlaps circle1")
+else:
+    print("Circle2 does not overlap circle1")
