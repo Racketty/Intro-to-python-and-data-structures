@@ -1,0 +1,12 @@
+#Write a program that prompts the user to enter a three-digit integer and determines whether it is a palindrome number. 
+#A number is palindrome if it reads the same from right to left and from left to right.
+
+num = int(input("Enter a three-digit integer: "))
+
+lastNum = num % 10
+firstNum = num // 100
+
+if lastNum == firstNum:
+    print(num, "is a palindrome")
+else:
+    print(num, "is not a palindrome")
