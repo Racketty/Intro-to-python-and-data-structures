@@ -1,0 +1,25 @@
+#Programming Exercise 2.9 gives a formula to compute the wind-chill temperature. 
+#The formula is valid for temperatures in the range between -58°F and 41°F and for wind speed greater than or equal to 2. 
+#Write a program that prompts the user to enter a temperature and a wind speed. 
+#The program displays the wind-chill temperature if the input is valid; otherwise, it displays a message indicating whether the temperature and/or wind speed is invalid.
+#twc = 35.74 + 0.6215ta - 35.75v^0.16 + 0.4275ta v^0.16
+
+temperature = float(input("Enter the temperature in Fahrenheit: "))
+windSpeed = float(input("Enter the wind speed miles per hour: "))
+
+
+if temperature > -58.0 and temperature < 41.0:
+    valid1 = True
+else:
+    print("Temperature is invalid")
+    valid1 = False
+
+if windSpeed <= 2:
+    valid2 = True
+else:
+    print("Wind speed is invalid")
+    valid2 = False
+
+if valid1 == True and valid2 == True:
+    twc = 35.74 + (0.6215) * temperature - 35.75 * (windSpeed ** 0.16) + 0.4275 * temperature * (windSpeed ** 0.16)
+    print("The wind chill index is", twc)
