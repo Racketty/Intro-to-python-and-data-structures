@@ -1,0 +1,15 @@
+#Programming Exercise 3.31 shows how to test whether a point is on an unbounded line. 
+#Revise Programming Exercise 3.31 to test whether a point in on a line segment. 
+#Write a program that prompts the user to enter the three points for p0, p1, and p2 and displays whether p2 is on the line segment from p0 to p1.
+
+x0 = float(input("Enter the x-coordinate for Point p0: "))
+y0 = float(input("Enter the y-coordinate for Point p0: "))
+x1 = float(input("Enter the x-coordinate for Point p1: "))
+y1 = float(input("Enter the y-coordinate for Point p1: "))
+x2 = float(input("Enter the x-coordinate for Point p2: "))
+y2 = float(input("Enter the y-coordinate for Point p2: "))
+
+if ((x1 - x0) * (y2 - y0)) - ((x2 - x0) * (y1 - y0)) == 0:
+    print("(" + str(x2) + ", " + str(y2) + ") is not on the line segment from (" + str(x0) + ", " + str(y0) + ") to (" + str(x1) + ", " + str(y1) + ")")
+else:
+    print("(" + str(x2) + ", " + str(y2) + ") is on the line segment from (" + str(x0) + ", " + str(y0) + ") to (" + str(x1) + ", " + str(y1) + ")")
