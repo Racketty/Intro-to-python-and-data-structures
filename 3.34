@@ -1,0 +1,8 @@
+#Write a program that displays a random coordinate inside a rectangle. The rectangle is centered at (0, 0) with width 100 and height 200.
+
+import random
+
+x = random.randint(-100, 100)
+y = random.randint(-50, 50)
+
+print (x, y)
