@@ -1,0 +1,16 @@
+#Write a program that prompts the user to enter the length from the center of a pentagon to a vertex 
+#and computes the area of the pentagon, as shown in the following figure.
+#The formula for computing the area of a pentagon is area = (5 * s^2) / (4 * tan(pi/5))
+#where s is the length of a side, The side can be computed using the formula s = 2 * r * sin(pi/5), 
+#where r is the length from the center of a pentagon to a vertex. 
+#Round up two digits after the decimal point
+
+import math
+
+r = float(input("Enter the length from the center to a vertex: "))
+
+s = 2 * r * math.sin(math.pi / 5)
+
+area = (5 * pow(s, 2)) / (4 * math.tan(math.pi / 5))
+
+print("The area of the pentagon is ", round(area, 2))
