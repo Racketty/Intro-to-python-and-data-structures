@@ -1,0 +1,7 @@
+#(Random character) Write a program that displays a random uppercase letter.
+
+import random
+
+upperLetter = chr(random.randint(65, 90))
+
+print(upperLetter)
