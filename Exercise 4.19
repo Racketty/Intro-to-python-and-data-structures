@@ -1,0 +1,7 @@
+#(Find the ASCII code of a character) Write a program that receives a character and displays its ASCII code.
+
+char = input("Enter a character: ")
+
+value = ord(char)
+
+print("The ASCII code for", char, "is", value)
