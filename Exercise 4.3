@@ -1,0 +1,37 @@
+#Use the GPS locations for Atlanta, Georgia; Orlando, Florida; Savannah, Georgia; and Charlotte, North Carolina in the figure in Section 4.1 to compute the estimated area enclosed by these four cities. 
+#(Hint: Use the formula in Programming Exercise 4.2 to compute the distance between two cities. 
+#Divide the polygon into two triangles and use the formula in Programming Exercise 2.14 to compute the area of a triangle.)
+
+import math
+
+#ATLANTA
+x1 = 33.7489954
+y1 = -84.3879824
+
+#ORLANDO
+x2 = 28.5383355
+y2 = -81.3792365
+
+#SAVANNAH
+x3 = 32.0835407
+y3 = -81.0998342
+
+#CHARLOTTE
+x4 = 35.2270869
+y4 = -80.8431267
+
+
+side1 = ((x2 - x1) ** 2 + (y2 - y1) ** 2) ** 0.5
+side2 = ((x3 - x2) ** 2 + (y3 - y2) ** 2) ** 0.5
+side3 = ((x1 - x3) ** 2 + (y1 - y3) ** 2) ** 0.5
+
+side4 = ((x4 - x3) ** 2 + (y4 - y3) ** 2) ** 0.5
+side5 = ((x3 - x2) ** 2 + (y3 - y2) ** 2) ** 0.5
+side6 = ((x3 - x2) ** 2 + (y3 - y2) ** 2) ** 0.5
+
+s1 = (side1 + side2 + side3) / 2
+s2 = (side4 + side5 + side6) / 2
+area1 = (s1 * (s1 - side1) * (s1 - side2) * (s1 - side3)) ** 0.5
+area2 = (s2 * (s2 - side4) * (s2 - side5) * (s2 - side6)) ** 0.5
+
+print(area1 + area2)
