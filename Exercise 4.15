@@ -1,0 +1,19 @@
+#(Corner point coordinates) Suppose a pentagon is centered at (0, 0) with one point at the 0 o’clock position, as shown in Figure 4.11c. 
+#Write a program that prompts the user to enter the radius of the bounding rectangle of a pentagon and displays the coordinates of the five corner points on the pentagon.
+
+import math
+
+radius = int(input("Enter the radius of the bounding circle: "))
+
+p1 = (radius * math.sin(2 * math.pi / 5), radius * math.cos(2 * math.pi / 5))
+p2 = (radius * math.sin(4 * math.pi / 5), radius * math.cos(4 * math.pi / 5))
+p3 = (radius * math.sin(6 * math.pi / 5), radius * math.cos(6 * math.pi / 5))
+p4 = (radius * math.sin(8 * math.pi / 5), radius * math.cos(8 * math.pi / 5))
+p5 = (radius * math.sin(10 * math.pi / 5), radius * math.cos(10 * math.pi / 5))
+
+print("The coordinates of five points on the pentagon are")
+print(p1)
+print(p5)
+print(p3)
+print(p4)
+print(p2)
