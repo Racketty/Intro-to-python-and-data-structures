@@ -1,0 +1,25 @@
+#(Random point on a circle) Write a program that generates three random points on a circle centered at (0, 0) with radius 40 and display three angles in a triangle formed by these three points, as shown in Figure 4.11a. 
+#(Hint: Generate a random angle α in radians between 0 and 2π , as shown in Figure 4.11b and the point determined by this angle is (r*cos(a), r*sin(a))
+
+import random
+import math
+
+a = random.uniform(0, 2 * math.pi)
+b = random.uniform(0, 2 * math.pi)
+c = random.uniform(0, 2 * math.pi)
+
+radius = 40
+
+p1 = (radius * math.cos(a), radius * math.sin(a))
+p2 = (radius * math.cos(b), radius * math.sin(b))
+p3 = (radius * math.cos(c), radius * math.sin(c))
+
+print("Three random points generated on a circle centered at (0, 0) with radius 40: ")
+print(p1)
+print(p2)
+print(p3)
+
+print("The angles between the three points are: ")
+print(a)
+print(b)
+print(c)
