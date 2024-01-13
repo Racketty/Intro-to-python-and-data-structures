@@ -1,0 +1,11 @@
+#(Hex to decimal) Write a program that prompts the user to enter a hex character and displays its corresponding decimal integer.
+
+hexChar = input("Enter a hex character: ")
+
+if hexChar == ("T"):
+    print("Invalid Input")
+    exit()
+
+value = bin(int(hexChar, 16))[2:]
+
+print("The binary value is", value)
