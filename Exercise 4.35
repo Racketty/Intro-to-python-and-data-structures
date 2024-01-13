@@ -1,0 +1,27 @@
+#(Slope-intercept form) Write a program that prompts the user to enter the coordinates of two points (x1, y1) and (x2, y2) and displays the line equation in the slope-intercept form, i.e., y = mx + b .
+#m and b can be computed using the following formula:
+#m = (y2-y1)/(x2-x1)    b=y1-mx1
+#don't display m if it is 1 and don't display b if it is 0.
+
+x1 = float(input("Enter the x-coordinate for Point 1: "))
+y1 = float(input("Enter the y-coordinate for Point 1: "))
+x2 = float(input("Enter the x-coordinate for Point 2: "))
+y2 = float(input("Enter the y-coordinate for Point 2: "))
+
+m = (y2 - y1) / (x2 - x1)
+b = y1 - (m * x1)
+
+point1 = (x1, y1)
+point2 = (x2, y2)
+
+print("The line equationfor two points", point1, "and", point2, "is")
+
+if m == 1:
+    print("y = x +", b)
+elif b == 0:
+    print("y =", str(m) + "x")
+elif b > 0:
+    print("y =", str(m) + "x +", b)
+else:   
+    print("y =", str(m) + "x", b)
+
