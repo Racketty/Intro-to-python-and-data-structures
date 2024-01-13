@@ -1,0 +1,9 @@
+#(Check SSN) Write a program that prompts the user to enter a Social Security number in the format ddd-dd-dddd, where d is a digit. 
+#Your program should check whether the input is valid.
+
+ssn = input("Enter a string for SSN: ")
+
+if len(ssn) != 11:
+    print("invalide")
+else:
+    print("a valid")
