@@ -1,0 +1,14 @@
+#(Order three cities) Write a program that prompts the user to enter three cities and displays them in ascending order.
+
+City1 = input("Enter the first city: ")
+City2 = input("Enter the second city: ")
+City3 = input("Enter the third city: ")
+
+cities = [City1, City2, City3]
+cities.sort()
+
+cityOne = cities[0]
+cityTwo = cities[1]
+cityThree = cities[2]
+
+print("Three cities in alphabetical order are", cityOne, cityTwo, cityThree)
