@@ -1,0 +1,33 @@
+#(Financial application: payroll) Write a program that reads the following information and prints a payroll statement:  
+#Employee’s name (e.g., Smith)
+#Number of hours worked in a week (e.g., 10)
+#Hourly pay rate (e.g., 9.75)
+#Federal tax withholding rate (e.g., 20%)
+#State tax withholding rate (e.g., 9%)
+
+name = input("Enter employee's name: ")
+hrsworked = float(input("Enter number of hours worked in a week: "))
+payrate = float(input("Enter hourly pay rate: "))
+fedtax = float(input("Enter federal tax withholding rate: "))
+statetax = float(input("Enter state tax withholding rate: "))
+
+grossPay = hrsworked * payrate
+
+fed = fedtax * grossPay
+state = statetax * grossPay
+deduction = fed + state
+total = grossPay - deduction
+
+fedPercent = fedtax * 100
+statePercent = statetax * 100
+
+print("Employee Name:", name)
+print()
+print("Hours Worked: ", hrsworked)
+print("Pay Rate: $" + str(payrate))
+print("Gross Pay: $" + str(grossPay))
+print("Deductions:")
+print("Federal Withholding (" + str(fedPercent) + "%): $" + str(f"{float(fed):.1f}"))
+print("State Withholding (" + str(statePercent) + "%):  $" + str(f"{float(state - 0.01):.2f}"))
+print("Total Deduction: $" + str(f"{float(deduction):.2f}"))
+print("Net Pay: $" + str(f"{float(total):.2f}"))
