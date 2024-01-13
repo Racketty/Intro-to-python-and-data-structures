@@ -1,0 +1,28 @@
+#(Phone key pads) The international standard letter/number mapping found on the telephone is shown below:
+#Write a program that prompts the user to enter a lowercase or uppercase letter and displays its corresponding number.
+
+letter = input("Enter an uppercase letter: ")
+
+letter = letter.upper()
+
+if letter in ['A', 'B', 'C']:
+    number = 2
+elif letter in ['D', 'E', 'F']:
+    number = 3
+elif letter in ['G', 'H', 'I']:
+    number = 4
+elif letter in ['J', 'K', 'L']:
+    number = 5
+elif letter in ['M', 'N', 'O']:
+    number = 6
+elif letter in ['P', 'Q', 'R', 'S']:
+    number = 7
+elif letter in ['T', 'U', 'V']:
+    number = 8
+elif letter in ['W', 'X', 'Y', 'Z']:
+    number = 9
+else:
+    print("invalid input")
+    exit()
+
+print("The corresponding number is", number)
