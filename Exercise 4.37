@@ -1,0 +1,19 @@
+#(Generate vehicle plate numbers) Assume a vehicle plate number consists of three uppercase letters followed by four digits. 
+#Write a program to generate a plate number.
+
+import random
+
+l1 = chr(random.randint(65, 90))
+l2 = chr(random.randint(65, 90))
+l3 = chr(random.randint(65, 90))
+
+letters = str(l1) + str(l2) + str(l3)
+
+n1 = random.randint(0, 9)
+n2 = random.randint(0, 9)
+n3 = random.randint(0, 9)
+n4 = random.randint(0, 9)
+
+numbers = str(n1) + str(n2) + str(n3) + str(n4)
+
+print(letters + numbers)
