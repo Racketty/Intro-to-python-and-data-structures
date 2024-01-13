@@ -1,0 +1,27 @@
+#(Business: check ISBN-10) An ISBN-10 (International Standard Book Number) consists of 10 digits: d1d2d3d4d5d6d7d8d9d10. 
+#The last digit, d10 is a checksum, which is calculated from the other nine digits using the following formula:
+#(d1 * 1 + d2 * 2 + d3 * 3 + d4 * 4 + d5 * 5 + d6 * 6 + d7 * 7 + d8 * 8 + d9 * 9) % 11
+
+number = input("Enter the first 9-digit of an ISBN number as a string: ")
+
+if len(number) < 9:
+    print("Incorrect input")
+    exit()
+
+d1 = int(number[0])
+d2 = int(number[1])
+d3 = int(number[2])
+d4 = int(number[3])
+d5 = int(number[4])
+d6 = int(number[5])
+d7 = int(number[6])
+d8 = int(number[7])
+d9 = int(number[8])
+
+checksum = (d1 * 1 + d2 * 2 + d3 * 3 + d4 * 4 + d5 * 5 + d6 * 6 + d7 * 7 + d8 * 8 + d9 * 9) % 11
+
+if checksum == 10:
+    tennex = "X"
+    print("The ISBN number is", number + str(tennex))
+else:
+    print("The ISBN number is", number + str(checksum))
