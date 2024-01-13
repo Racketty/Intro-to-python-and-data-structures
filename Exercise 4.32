@@ -1,0 +1,11 @@
+#(Decimal to hex) Write a program that prompts the user to enter an integer between 0 and 15 and displays its corresponding hex number.
+
+decimal = int(input("Enter a decimal integer value (0 to 15): "))
+
+if decimal < 0 or decimal > 15:
+    print("Invalid input")
+    exit()
+
+value = hex(decimal)[2:]
+
+print("The hex value is", value.upper())
