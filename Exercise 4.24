@@ -1,0 +1,27 @@
+#(Vowel or consonant?) Assume letters A/a, E/e, I/i, O/o, and U/u as the vowels. 
+#Write a program that prompts the user to enter a letter and check whether the letter is a vowel or consonant.
+
+letter = input("Enter a letter: ")
+
+if letter == ("?"):
+    print(letter, "is an invalid input")
+    exit()
+
+letterUp = letter.upper()
+
+if letterUp == ("A"):
+    vowel = True
+elif letterUp == ("E"):
+    vowel = True
+elif letterUp == ("I"):
+    vowel = True
+elif letterUp == ("O"):
+    vowel = True
+elif letterUp == ("U"):
+    vowel = True
+else:
+    print(letter, "is a consonant")
+    exit()
+
+if vowel == True:
+    print("The letter", letter, "is a vowel")
