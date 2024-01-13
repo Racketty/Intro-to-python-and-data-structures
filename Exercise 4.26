@@ -1,0 +1,31 @@
+#(Student major and status) Write a program that prompts the user to enter two characters and displays the major and status represented in the characters. 
+#The first character indicates the major and the second is number character 1, 2, 3, and 4, which indicates whether a student is a freshman, sophomore, junior, or senior. 
+#Suppose the following characters are used to denote the majors:
+#M: Mathematics
+#C: Computer Science
+#I: Information Technology
+
+student = input("Enter two characters: ")
+
+if student[0] == ("M"):
+    major = "Mathematics"
+elif student[0] == ("C"):
+    major = "Computer Science"
+elif student[0] == ("I"):
+    major = "Information Technology"
+else:
+    exit()
+
+if student[1] == ("1"):
+    status = "Freshman"
+elif student[1] == ("2"):
+    status = "Sophomore"
+elif student[1] == ("3"):
+    status = "Junior"
+elif student[1] == ("4"):
+    status = "Senior"
+else:
+    exit()
+
+print(major)
+print(status)
