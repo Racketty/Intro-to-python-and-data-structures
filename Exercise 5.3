@@ -1,0 +1,17 @@
+#(Conversion from kilograms to pounds) Write a program that displays the following table (note that 1 kilogram is 2.2 pounds):
+#Kilograms      Pounds
+#1                  2.2
+#3                  6.6
+#...
+#197                433.4
+#200                437.8
+
+print("Kilograms        Pounds")
+print("1                    2.2")
+
+kilo = 0
+lbs = 0
+while kilo < 201:
+    kilo += 3
+    lbs += 6.6
+    print(round(kilo, 2), "                 ", round(lbs, 2))
