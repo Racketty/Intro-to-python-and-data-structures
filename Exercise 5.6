@@ -1,0 +1,15 @@
+#(Conversion from miles to kilometers and kilometers to miles) Write a program that displays the following two tables side by side (note that 1 mile is 1.609 kilometers):
+
+print("Miles    Kilometers  |   Kilometers      Miles")
+
+miles = 1
+kilo = 0
+kilometers = 0
+mi = 20
+
+while miles <= 10 and mi <= 65:
+    kilo = miles * 1.609
+    kilometers = mi * 0.62137
+    print(miles, "       ", round(kilo, 3), "   |   ", mi, "        ", round(kilometers, 3))
+    miles += 1
+    mi += 5
