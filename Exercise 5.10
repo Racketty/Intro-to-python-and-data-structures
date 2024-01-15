@@ -1,0 +1,18 @@
+#Find the highest score) Write a program that prompts the user to enter the number of students and each student’s name and score, and displays the name and highest score. 
+#Assume that the number of students is at least 1.
+
+students = int(input(("Enter the number of students: ")))
+
+max_score = 0
+top_student = ""
+
+while students != 0:
+    name = input("Enter a student name: ")
+    score = float(input("Enter a student score: "))
+
+    if score > max_score:
+        max_score = score
+        top_student = name
+    students -= 1
+
+print("Top student", top_student, "score is", max_score)
