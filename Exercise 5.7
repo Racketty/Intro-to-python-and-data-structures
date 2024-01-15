@@ -1,0 +1,15 @@
+#(Use trigonometric functions) Print the following table to display the sin value and cos value of degrees from 0 to 360 with increments of 10 degrees. 
+#Round the value to keep four digits after the decimal point.
+
+import math
+
+print("Degree       Sin         Cos")
+
+degree = 0
+
+while degree <= 360:
+    sin = math.sin(degree * math.pi / 180)
+    cos = math.cos(degree * math.pi / 180)
+    print(degree, "     ", sin, "       ", cos)
+    degree += 10
+
