@@ -1,0 +1,12 @@
+#(Use the math.sqrt function) Write a program that prints the following table using the sqrt function in the math module.
+
+import math
+
+print("Number       Square Root")
+
+number = 0
+
+while number <= 20:
+    value = math.sqrt(number)
+    print(number, "     ", "{:<10.4f}".format(value))
+    number += 2
